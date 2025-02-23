@@ -1,0 +1,63 @@
+body{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+h1::before{
+    content:"this has been written by :before";
+    display:block;
+    color:aqua;
+    border:2px solid black;
+}
+h1::after{
+    content:"this has been written by :after";
+    display:block;
+    color:turquoise
+}
+
+/* div:hover::after{
+    content:"being hovered";
+    color: red;
+    position: absolute;
+} */
+div::before{
+    content:" ";
+    width: 100px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    /* top:-50%;
+    bottom:-50%; */
+    animation: expand 4s ease-in-out infinite;
+    
+}
+
+@keyframes expand{
+    0%{
+        width:0px;
+    }
+    33%{
+        width:50px;
+        background-color: green;
+        transform: rotateZ(90deg) translate(-5em,7.5em)
+
+    }
+    66%{
+        width:80px;
+        background-color: blue;
+        transform: rotateZ(180deg) translate(-5em,7.5em)
+        /* opacity: 0; */
+    }
+    100%{
+        width:120px;
+        background-color: greenyellow;
+        transform:rotateZ(360deg) translate(-5em,7.5em) ;
+    }
+}
+ol>li:nth-child(3):hover{
+    color:red
+}
