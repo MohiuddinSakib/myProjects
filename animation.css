@@ -1,0 +1,126 @@
+
+body{
+    background-image: rgb(240, 232, 232);
+    border: 4px rgb(0, 0, 0) solid;
+    min-height:800px;
+    box-sizing: border-box;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+}
+.btn{
+    margin:10px;
+    padding:10px;
+    background-color: aqua;
+    border: 2px solid rgb(0, 0, 23);
+    border-radius: 10px;
+    display: inline;
+    transition: 150ms  ease;
+}
+
+.btn:hover{
+    background-color: red;
+    border-radius: 20px;
+    scale:2
+}
+
+.element{
+    background-color:rgb(92, 237, 19);
+    height:100px;
+    width:100px;
+    text-align: center;
+    /* animation: round 3s infinite ; */
+    animation: spin 5s infinite ease-in-out alternate;
+}
+
+
+
+@keyframes spin {
+    0%{
+
+    }
+    50%{
+        sacle:3
+    }
+    75%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+    }
+    100%{
+        background-color: rgb(215, 28, 28);
+        
+        /* transform: rotate(360deg); */
+    }
+}
+
+.element2{
+    background-color:rgb(92, 237, 19);
+    height:100px;
+    width:100px;
+    text-align: center;
+    border-radius: 10px;
+  
+    /* animation: spin 5s infinite ease-in-out alternate; */
+}
+@keyframes round {
+    0%{
+        border-radius: 20px;
+    }50%{
+        scale: 2;
+        border-radius: 50px;
+        transform:rotate3d(360deg)
+    }
+    100%{
+        /* border-radius: 20px; */
+        /* transform:rotate3d(60deg) */
+    }
+}
+.element2:hover{
+  animation: round 3s infinite ;
+  /* transform: rotateY(180deg) */
+}
+
+.loader{
+    background-color: black;
+    border:2px solid aqua;
+    height:100px;
+    width:100px;
+    border-radius: 30px;
+    animation:loading 2s ease-in-out infinite
+}
+@keyframes loading{
+    0%{
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+    33%{
+        transform: rotateX(180deg) rotateY(0) rotateZ(0);
+    }
+    67%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(0);
+    }
+    100%{
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    }
+}
+
+
+.delani{
+    height: 100px;
+    width:150px;
+    background-color: in;
+    animation: delay 1.5s ease-in-out infinite;
+    border: 2px solid greenyellow;
+    border-radius: 20px;
+}
+@keyframes delay {
+    0%{
+        opacity: 0;
+        /* transform: translateY(40px); */
+        transform: translateX(40px);
+    }
+    100%{
+        opacity: 1;
+        /* transform: translateY(-50px); */
+    }
+}
