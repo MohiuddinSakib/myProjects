@@ -1,0 +1,42 @@
+{
+  "name": "landingcraft-saas-landing",
+  "version": "1.0.0",
+  "description": "A modern, beautiful landing page for LandingCraft - a SaaS app that creates landing pages",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx live-server --port=3000 --open=/",
+    "build": "echo 'Static site - no build process needed'",
+    "serve": "npx http-server . -p 8080",
+    "validate": "npx html-validate index.html",
+    "optimize": "npx imagemin-cli --out-dir=optimized images/*"
+  },
+  "keywords": [
+    "landing-page",
+    "saas",
+    "responsive",
+    "modern",
+    "css",
+    "javascript",
+    "html"
+  ],
+  "author": "LandingCraft Team",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "html-validate": "^8.7.4",
+    "imagemin-cli": "^7.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/landingcraft-landing"
+  },
+  "homepage": "https://yourusername.github.io/landingcraft-landing"
+}
